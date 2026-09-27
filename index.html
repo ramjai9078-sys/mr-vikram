@@ -1,0 +1,688 @@
+<div id="rochit-fit-page">
+
+<style>
+/* =========================
+   ROCHIT TRADER LANDING PAGE
+========================= */
+
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #160403 !important;
+}
+
+#rochit-fit-page,
+#rochit-fit-page * {
+    box-sizing: border-box;
+}
+
+#rochit-fit-page {
+    width: 100%;
+    height: 100svh;
+    min-height: 500px;
+    overflow: hidden;
+    background: #160403;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#rochit-fit-page .screen {
+    width: 100%;
+    max-width: 520px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2.2vh 14px 1.2vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    background: #160403;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+#rochit-fit-page .logo {
+    width: 17vh;
+    height: 17vh;
+
+    min-width: 78px;
+    min-height: 78px;
+    max-width: 120px;
+    max-height: 120px;
+
+    flex-shrink: 0;
+
+    padding: 4px;
+    margin-bottom: 1.4vh;
+
+    border-radius: 50%;
+    border: 3px solid #00bfff;
+
+    background: #160403;
+
+    box-shadow:
+        0 0 0 3px #ffb000,
+        0 0 0 6px #160403,
+        0 0 0 8px #00bfff;
+}
+
+#rochit-fit-page .logo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* =========================
+   NAME
+========================= */
+
+#rochit-fit-page .name {
+    flex-shrink: 0;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 3.7vh;
+    line-height: 1;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+#rochit-fit-page .crown {
+    font-size: 2.8vh;
+}
+
+/* =========================
+   MARKET
+========================= */
+
+#rochit-fit-page .market {
+    flex-shrink: 0;
+
+    margin-top: 1.7vh;
+
+    color: #ffb900;
+
+    font-family: Georgia, serif;
+    font-size: 1.9vh;
+    line-height: 1;
+    font-weight: 800;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+#rochit-fit-page .description {
+    flex-shrink: 0;
+
+    margin: 1.8vh auto;
+
+    color: #fff;
+
+    font-family: Georgia, serif;
+    font-size: 1.7vh;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+#rochit-fit-page .telegram {
+    width: 72%;
+    height: 6.5vh;
+
+    min-height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin: 0 auto 1.7vh;
+
+    border-radius: 8px;
+
+    background: linear-gradient(
+        90deg,
+        #ffbd00,
+        #ffac00
+    );
+
+    color: #fff !important;
+
+    text-decoration: none !important;
+
+    font-size: 2.05vh;
+    line-height: 1;
+    font-weight: 900;
+
+    box-shadow:
+        0 0 18px rgba(255,190,0,.35);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+#rochit-fit-page .telegram:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(255,190,0,.55);
+}
+
+#rochit-fit-page .telegram:active {
+    transform: scale(.98);
+}
+
+#rochit-fit-page .tg-icon {
+    font-size: 2.4vh;
+    line-height: 1;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+#rochit-fit-page .cards {
+    width: 100%;
+
+    flex: 1;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 1.1vh;
+}
+
+#rochit-fit-page .card {
+    width: 100%;
+    height: 9.7vh;
+
+    min-height: 52px;
+    max-height: 72px;
+
+    flex-shrink: 1;
+
+    display: flex;
+    align-items: center;
+
+    padding: 1vh 1.8vh;
+
+    text-align: left;
+
+    border: 1px solid rgba(176,93,16,.55);
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            #1d0907,
+            #180604
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(255,170,0,.025);
+
+    transition:
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+#rochit-fit-page .card:hover {
+    border-color: rgba(255,170,0,.7);
+    transform: translateY(-1px);
+}
+
+/* =========================
+   CARD ICON
+========================= */
+
+#rochit-fit-page .card-icon {
+    width: 6vh;
+    height: 6vh;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    max-width: 52px;
+    max-height: 52px;
+
+    margin-right: 1.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,170,0,.35);
+    border-radius: 11px;
+
+    color: #ffb000;
+
+    background: rgba(90,45,0,.18);
+
+    font-size: 2.6vh;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+#rochit-fit-page .card-text {
+    flex: 1;
+    min-width: 0;
+}
+
+#rochit-fit-page .card-title {
+    margin: 0 0 .45vh;
+
+    color: #fff;
+
+    font-size: 2.05vh;
+    line-height: 1;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+#rochit-fit-page .card-desc {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 1.45vh;
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+/* =========================
+   RIGHT ICON
+========================= */
+
+#rochit-fit-page .right {
+    width: 3.5vh;
+    height: 3.5vh;
+
+    min-width: 25px;
+    min-height: 25px;
+
+    margin-left: 7px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,170,0,.4);
+    border-radius: 50%;
+
+    color: #ffb000;
+
+    font-size: 1.5vh;
+}
+
+/* =========================
+   SECOND BUTTON
+========================= */
+
+#rochit-fit-page .second {
+    margin-top: 1.5vh;
+    margin-bottom: 1vh;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+#rochit-fit-page .ads {
+    flex-shrink: 0;
+
+    color: #888;
+
+    font-size: 1.35vh;
+    line-height: 1;
+}
+
+#rochit-fit-page .ads a {
+    color: #ffb000 !important;
+
+    font-weight: 900;
+
+    text-decoration: none !important;
+}
+
+/* =========================
+   SHORT PHONES
+========================= */
+
+@media (max-height: 650px) {
+
+    #rochit-fit-page .screen {
+        padding-top: 1.5vh;
+    }
+
+    #rochit-fit-page .logo {
+        width: 14vh;
+        height: 14vh;
+
+        min-width: 70px;
+        min-height: 70px;
+
+        margin-bottom: 1vh;
+    }
+
+    #rochit-fit-page .name {
+        font-size: 3.1vh;
+    }
+
+    #rochit-fit-page .market {
+        margin-top: 1.2vh;
+        font-size: 1.6vh;
+    }
+
+    #rochit-fit-page .description {
+        margin: 1.3vh auto;
+        font-size: 1.45vh;
+    }
+
+    #rochit-fit-page .telegram {
+        height: 5.7vh;
+        min-height: 38px;
+
+        font-size: 1.75vh;
+
+        margin-bottom: 1.2vh;
+    }
+
+    #rochit-fit-page .card {
+        height: 8.5vh;
+        min-height: 46px;
+    }
+
+    #rochit-fit-page .card-icon {
+        width: 5vh;
+        height: 5vh;
+
+        min-width: 34px;
+        min-height: 34px;
+
+        font-size: 2.2vh;
+    }
+
+    #rochit-fit-page .card-title {
+        font-size: 1.8vh;
+    }
+
+    #rochit-fit-page .card-desc {
+        font-size: 1.25vh;
+    }
+
+    #rochit-fit-page .second {
+        margin-top: 1.1vh;
+        margin-bottom: .7vh;
+    }
+}
+
+/* =========================
+   VERY SHORT PHONES
+========================= */
+
+@media (max-height: 570px) {
+
+    #rochit-fit-page .screen {
+        padding-top: 1vh;
+    }
+
+    #rochit-fit-page .logo {
+        width: 12vh;
+        height: 12vh;
+
+        min-width: 60px;
+        min-height: 60px;
+    }
+
+    #rochit-fit-page .name {
+        font-size: 2.8vh;
+    }
+
+    #rochit-fit-page .market {
+        font-size: 1.4vh;
+        margin-top: .9vh;
+    }
+
+    #rochit-fit-page .description {
+        font-size: 1.25vh;
+        margin: .9vh auto;
+    }
+
+    #rochit-fit-page .telegram {
+        height: 5vh;
+        min-height: 34px;
+
+        font-size: 1.55vh;
+    }
+
+    #rochit-fit-page .card {
+        height: 7.7vh;
+        min-height: 40px;
+
+        padding: .7vh 1vh;
+    }
+
+    #rochit-fit-page .card-icon {
+        width: 4.2vh;
+        height: 4.2vh;
+
+        min-width: 30px;
+        min-height: 30px;
+
+        margin-right: 1vh;
+    }
+
+    #rochit-fit-page .card-title {
+        font-size: 1.55vh;
+    }
+
+    #rochit-fit-page .card-desc {
+        font-size: 1.05vh;
+    }
+
+    #rochit-fit-page .ads {
+        font-size: 1.1vh;
+    }
+}
+
+/* =========================
+   SMALL WIDTH
+========================= */
+
+@media (max-width: 360px) {
+
+    #rochit-fit-page .telegram {
+        width: 78%;
+    }
+
+    #rochit-fit-page .card-title {
+        font-size: 1.7vh;
+    }
+
+    #rochit-fit-page .card-desc {
+        font-size: 1.15vh;
+    }
+}
+</style>
+
+
+<div class="screen">
+
+    <!-- LOGO -->
+    <div class="logo">
+        <img
+            src="https://i.postimg.cc/cHXTm0q7/Screenshot-20260907-204633.jpg"
+            alt="Rochit Trader"
+            loading="eager"
+            decoding="async"
+        >
+    </div>
+
+
+    <!-- NAME -->
+    <h1 class="name">
+        👑 ROCHIT TRADER 👑
+    </h1>
+
+
+    <!-- MARKET -->
+    <div class="market">
+        NIFTY • BANKNIFTY • SENSEX
+    </div>
+
+
+    <!-- DESCRIPTION -->
+    <div class="description">
+        Clear market calls. Timely updates.<br>
+        One focused trading community.
+    </div>
+
+
+    <!-- TELEGRAM BUTTON -->
+    <a
+        class="telegram"
+        href="https://t.me/+y6laU0wMNFRjNGJl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join Rochit Trader Telegram Channel"
+    >
+        <span class="tg-icon">➤</span>
+        JOIN TELEGRAM CHANNEL
+    </a>
+
+
+    <!-- FEATURES -->
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">
+                ↗
+            </div>
+
+            <div class="card-text">
+
+                <div class="card-title">
+                    Daily Market Calls
+                </div>
+
+                <div class="card-desc">
+                    Actionable updates, shared consistently
+                </div>
+
+            </div>
+
+            <div class="right">
+                ✓
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                ◎
+            </div>
+
+            <div class="card-text">
+
+                <div class="card-title">
+                    Research-Based Levels
+                </div>
+
+                <div class="card-desc">
+                    Clear levels with a structured market view
+                </div>
+
+            </div>
+
+            <div class="right">
+                ★
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                ♙
+            </div>
+
+            <div class="card-text">
+
+                <div class="card-title">
+                    6+ Years Experience
+                </div>
+
+                <div class="card-desc">
+                    Perspective built through market cycles
+                </div>
+
+            </div>
+
+            <div class="right">
+                ✓
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SECOND TELEGRAM BUTTON -->
+    <a
+        class="telegram second"
+        href="https://t.me/+y6laU0wMNFRjNGJl"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Join Rochit Trader Telegram Channel"
+    >
+        <span class="tg-icon">➤</span>
+        JOIN TELEGRAM CHANNEL
+    </a>
+
+
+    <!-- ADS -->
+    <div class="ads">
+        Ads managed by
+        <a
+            href="https://t.me/+2VYPrgORhYA4MjRl"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            satyamadsagency
+        </a>
+    </div>
+
+</div>
+
+</div>
