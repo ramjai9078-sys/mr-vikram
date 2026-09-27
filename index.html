@@ -1,682 +1,237 @@
-<div id="rochit-fit-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PANKAJ BHARDWAJ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-/* =========================================
-   ROCHIT TRADER
-   MOBILE-FIRST LANDING PAGE
-========================================= */
 
-#rochit-fit-page,
-#rochit-fit-page * {
-    box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
-#rochit-fit-page {
-    width: 100%;
-    min-height: 100vh;
-    min-height: 100dvh;
-
-    margin: 0;
-    padding: 0;
-
-    background: #160403;
-    color: #fff;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    overflow-x: hidden;
+body{
+background:#0f172a;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+color:#fff;
 }
 
-/* Remove Elementor spacing around widget */
-#rochit-fit-page {
-    margin-block: 0 !important;
+/* CARD */
+
+.container{
+width:95%;
+max-width:420px;
+padding:30px 25px;
+border-radius:18px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+
+border:1px solid rgba(255,255,255,0.08);
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+text-align:center;
 }
 
-#rochit-fit-page .screen {
-    width: 100%;
-    max-width: 520px;
+/* LOGO */
 
-    min-height: 100vh;
-    min-height: 100dvh;
-
-    margin: 0 auto;
-    padding: 18px 14px 12px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(255, 174, 0, .08),
-            transparent 32%
-        ),
-        #160403;
+.logo{
+width:80px;
+height:80px;
+border-radius:50%;
+border:2px solid #FFD700;
+margin-bottom:12px;
 }
 
-/* =========================================
-   LOGO
-========================================= */
+/* TEXT */
 
-#rochit-fit-page .logo {
-    width: clamp(76px, 22vw, 112px);
-    height: clamp(76px, 22vw, 112px);
-
-    flex-shrink: 0;
-
-    padding: 4px;
-
-    margin: 4px 0 14px;
-
-    border-radius: 50%;
-
-    border: 3px solid #00bfff;
-
-    background: #160403;
-
-    box-shadow:
-        0 0 0 3px #ffb000,
-        0 0 0 6px #160403,
-        0 0 0 8px #00bfff,
-        0 0 24px rgba(0,191,255,.25);
+h1{
+font-size:22px;
+color:#FFD700;
+margin-bottom:6px;
 }
 
-#rochit-fit-page .logo img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    border-radius: 50%;
+h2{
+font-size:15px;
+opacity:0.9;
+margin-bottom:10px;
 }
 
-/* =========================================
-   NAME
-========================================= */
-
-#rochit-fit-page .name {
-    width: 100%;
-
-    margin: 0;
-
-    color: #fff;
-
-    font-size: clamp(22px, 7vw, 31px);
-    line-height: 1.05;
-
-    font-weight: 900;
-
-    white-space: nowrap;
-
-    text-shadow:
-        0 2px 12px rgba(255,255,255,.08);
+.sub{
+font-size:13px;
+opacity:0.7;
+margin-bottom:18px;
 }
 
-/* =========================================
-   MARKET
-========================================= */
+/* BUTTON */
 
-#rochit-fit-page .market {
-    margin-top: 11px;
-
-    color: #ffbd00;
-
-    font-family: Georgia, serif;
-
-    font-size: clamp(13px, 3.7vw, 17px);
-
-    line-height: 1.2;
-
-    font-weight: 800;
-
-    letter-spacing: .3px;
+.btn{
+display:block;
+text-decoration:none;
+background:#22c55e;
+color:#000;
+font-weight:700;
+padding:16px;
+border-radius:10px;
+margin:12px 0;
+transition:0.3s;
 }
 
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-#rochit-fit-page .description {
-    margin: 12px auto 15px;
-
-    max-width: 360px;
-
-    color: #fff;
-
-    font-family: Georgia, serif;
-
-    font-size: clamp(13px, 3.5vw, 16px);
-
-    line-height: 1.35;
-
-    font-weight: 600;
+.btn:hover{
+background:#16a34a;
+transform:scale(1.03);
 }
 
-/* =========================================
-   TELEGRAM BUTTON
-========================================= */
+/* TRUST BOX */
 
-#rochit-fit-page .telegram {
-    width: min(90%, 360px);
-
-    min-height: 46px;
-
-    padding: 0 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    margin: 0 auto 14px;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffc400 0%,
-            #ffab00 100%
-        );
-
-    color: #fff !important;
-
-    text-decoration: none !important;
-
-    font-size: clamp(14px, 3.8vw, 17px);
-
-    line-height: 1;
-
-    font-weight: 900;
-
-    letter-spacing: .2px;
-
-    box-shadow:
-        0 5px 20px rgba(255,174,0,.22);
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+.trust{
+background:rgba(0,255,150,0.08);
+padding:10px;
+border-radius:10px;
+font-size:13px;
+margin-bottom:15px;
+border:1px solid rgba(0,255,150,0.2);
 }
 
-#rochit-fit-page .telegram:hover {
-    transform: translateY(-2px);
+/* LIST */
 
-    box-shadow:
-        0 8px 28px rgba(255,174,0,.35);
+.points{
+list-style:none;
+font-size:14px;
+text-align:left;
+margin:15px 0;
 }
 
-#rochit-fit-page .telegram:active {
-    transform: scale(.98);
+.points li{
+margin:8px 0;
 }
 
-#rochit-fit-page .tg-icon {
-    font-size: 20px;
+/* URGENCY */
 
-    line-height: 1;
+.timer{
+margin-top:10px;
+font-size:13px;
+color:#facc15;
 }
 
-/* =========================================
-   CARDS
-========================================= */
+/* SOCIAL PROOF */
 
-#rochit-fit-page .cards {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 9px;
-
-    margin: 0;
+.proof{
+margin-top:12px;
+font-size:12px;
+opacity:0.7;
 }
 
-/* =========================================
-   CARD
-========================================= */
+/* FOOTER BRAND */
 
-#rochit-fit-page .card {
-    width: 100%;
-
-    min-height: 70px;
-
-    padding: 10px 11px;
-
-    display: flex;
-    align-items: center;
-
-    text-align: left;
-
-    border-radius: 13px;
-
-    border: 1px solid rgba(255,174,0,.25);
-
-    background:
-        linear-gradient(
-            110deg,
-            rgba(36,12,8,.98),
-            rgba(24,6,4,.98)
-        );
-
-    box-shadow:
-        inset 0 0 20px rgba(255,170,0,.025),
-        0 3px 12px rgba(0,0,0,.18);
+.footer{
+margin-top:20px;
+font-size:12px;
+opacity:0.6;
 }
 
-/* =========================================
-   CARD ICON
-========================================= */
-
-#rochit-fit-page .card-icon {
-    width: 44px;
-    height: 44px;
-
-    min-width: 44px;
-
-    margin-right: 11px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 11px;
-
-    border: 1px solid rgba(255,174,0,.35);
-
-    background:
-        rgba(100,50,0,.18);
-
-    color: #ffb000;
-
-    font-size: 21px;
+.footer a{
+color:#38bdf8;
+text-decoration:none;
+font-weight:600;
 }
 
-/* =========================================
-   CARD TEXT
-========================================= */
-
-#rochit-fit-page .card-text {
-    flex: 1;
-
-    min-width: 0;
-
-    overflow: hidden;
+.footer a:hover{
+text-decoration:underline;
 }
 
-#rochit-fit-page .card-title {
-    margin: 0 0 5px;
+/* RISK */
 
-    color: #fff;
-
-    font-size: clamp(14px, 4vw, 17px);
-
-    line-height: 1.15;
-
-    font-weight: 800;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
+.risk{
+margin-top:10px;
+font-size:11px;
+opacity:0.5;
 }
 
-#rochit-fit-page .card-desc {
-    margin: 0;
-
-    color: #999;
-
-    font-size: clamp(10px, 3vw, 13px);
-
-    line-height: 1.2;
-
-    white-space: nowrap;
-
-    overflow: hidden;
-
-    text-overflow: ellipsis;
-}
-
-/* =========================================
-   RIGHT ICON
-========================================= */
-
-#rochit-fit-page .right {
-    width: 27px;
-    height: 27px;
-
-    min-width: 27px;
-
-    margin-left: 7px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    border: 1px solid rgba(255,174,0,.4);
-
-    color: #ffb000;
-
-    font-size: 12px;
-}
-
-/* =========================================
-   SECOND BUTTON
-========================================= */
-
-#rochit-fit-page .second {
-    margin-top: 14px;
-    margin-bottom: 10px;
-}
-
-/* =========================================
-   FOOTER
-========================================= */
-
-#rochit-fit-page .ads {
-    margin-top: 0;
-
-    padding-bottom: 3px;
-
-    color: #777;
-
-    font-size: 11px;
-
-    line-height: 1.2;
-}
-
-#rochit-fit-page .ads a {
-    color: #ffb000 !important;
-
-    font-weight: 800;
-
-    text-decoration: none !important;
-}
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 380px) {
-
-    #rochit-fit-page .screen {
-        padding: 13px 11px 9px;
-    }
-
-    #rochit-fit-page .logo {
-        width: 72px;
-        height: 72px;
-
-        margin-bottom: 11px;
-    }
-
-    #rochit-fit-page .market {
-        margin-top: 8px;
-    }
-
-    #rochit-fit-page .description {
-        margin: 9px auto 11px;
-    }
-
-    #rochit-fit-page .telegram {
-        min-height: 43px;
-
-        margin-bottom: 10px;
-    }
-
-    #rochit-fit-page .card {
-        min-height: 62px;
-
-        padding: 8px;
-    }
-
-    #rochit-fit-page .card-icon {
-        width: 39px;
-        height: 39px;
-
-        min-width: 39px;
-
-        margin-right: 9px;
-
-        font-size: 18px;
-    }
-
-    #rochit-fit-page .right {
-        width: 24px;
-        height: 24px;
-
-        min-width: 24px;
-    }
-
-    #rochit-fit-page .second {
-        margin-top: 10px;
-        margin-bottom: 8px;
-    }
-}
-
-/* =========================================
-   VERY SMALL / SHORT DEVICES
-========================================= */
-
-@media (max-height: 650px) {
-
-    #rochit-fit-page .screen {
-        padding-top: 9px;
-        padding-bottom: 7px;
-    }
-
-    #rochit-fit-page .logo {
-        width: 66px;
-        height: 66px;
-
-        margin-bottom: 8px;
-    }
-
-    #rochit-fit-page .market {
-        margin-top: 7px;
-    }
-
-    #rochit-fit-page .description {
-        margin: 7px auto 9px;
-    }
-
-    #rochit-fit-page .telegram {
-        min-height: 39px;
-
-        margin-bottom: 8px;
-    }
-
-    #rochit-fit-page .cards {
-        gap: 6px;
-    }
-
-    #rochit-fit-page .card {
-        min-height: 55px;
-
-        padding: 6px 8px;
-    }
-
-    #rochit-fit-page .card-icon {
-        width: 36px;
-        height: 36px;
-
-        min-width: 36px;
-
-        font-size: 17px;
-    }
-
-    #rochit-fit-page .card-title {
-        margin-bottom: 3px;
-    }
-
-    #rochit-fit-page .second {
-        margin-top: 8px;
-        margin-bottom: 6px;
-    }
-
-    #rochit-fit-page .ads {
-        font-size: 9px;
-    }
-}
 </style>
+</head>
 
+<body>
 
-<div class="screen">
+<div class="container">
 
-    <!-- LOGO -->
-    <div class="logo">
-        <img
-            src="https://i.postimg.cc/cHXTm0q7/Screenshot-20260907-204633.jpg"
-            alt="Rochit Trader"
-            loading="eager"
-            decoding="async"
-        >
-    </div>
+<img src="https://i.ibb.co/Fb2K73tD/S6-A1-N74-Xd0j-Kua7-VHeh-Nh7-HTj-B1-mtdp-PUv-FYp-Ukh-Ko-DCGi21-RSmom1k6-Si-Hgr-Hab22-Iica-O4ugqb-Uq-Fk-ZLVEU.jpg" class="logo">
 
+<h1>PANKAJ BHARDWAJ</h1>
+<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
 
-    <!-- NAME -->
-    <h1 class="name">
-        👑 ROCHIT TRADER 👑
-    </h1>
+<p class="sub">
+Daily Intraday Trading Signals & Analysis
+</p>
 
+<!-- TOP BUTTON -->
+<a href="https://t.me/+jq3VD_u7rccyMzY1" class="btn">
+JOIN NOW FOR FREE TELEGRAM
+</a>
 
-    <!-- MARKET -->
-    <div class="market">
-        NIFTY • BANKNIFTY • SENSEX
-    </div>
-
-
-    <!-- DESCRIPTION -->
-    <div class="description">
-        Clear market calls. Timely updates.<br>
-        One focused trading community.
-    </div>
-
-
-    <!-- TELEGRAM BUTTON -->
-    <a
-        class="telegram"
-        href="https://t.me/+y6laU0wMNFRjNGJl"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <span class="tg-icon">➤</span>
-        JOIN TELEGRAM CHANNEL
-    </a>
-
-
-    <!-- CARDS -->
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-icon">
-                ↗
-            </div>
-
-            <div class="card-text">
-
-                <div class="card-title">
-                    Daily Market Calls
-                </div>
-
-                <div class="card-desc">
-                    Actionable updates, shared consistently
-                </div>
-
-            </div>
-
-            <div class="right">
-                ✓
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                ◎
-            </div>
-
-            <div class="card-text">
-
-                <div class="card-title">
-                    Research-Based Levels
-                </div>
-
-                <div class="card-desc">
-                    Clear levels with a structured market view
-                </div>
-
-            </div>
-
-            <div class="right">
-                ★
-            </div>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="card-icon">
-                ♙
-            </div>
-
-            <div class="card-text">
-
-                <div class="card-title">
-                    6+ Years Experience
-                </div>
-
-                <div class="card-desc">
-                    Perspective built through market cycles
-                </div>
-
-            </div>
-
-            <div class="right">
-                ✓
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- SECOND TELEGRAM BUTTON -->
-    <a
-        class="telegram second"
-        href="https://t.me/+y6laU0wMNFRjNGJl"
-        target="_blank"
-        rel="noopener noreferrer"
-    >
-        <span class="tg-icon">➤</span>
-        JOIN TELEGRAM CHANNEL
-    </a>
-
-
-    <!-- ADS -->
-    <div class="ads">
-        Ads managed by
-        <a
-            href="https://t.me/+2VYPrgORhYA4MjRl"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            satyamadsagency
-        </a>
-    </div>
-
+<div class="trust">
+✔ Trusted by 5,000+ Traders <br>
+✔ Daily Consistent Setups
 </div>
 
+<ul class="points">
+<li>✔ 5–7 High Probability Trades</li>
+<li>✔ Exact Entry, SL & Target</li>
+<li>✔ Beginner Friendly Guidance</li>
+<li>✔ Live Market Updates</li>
+</ul>
+
+<!-- BOTTOM BUTTON -->
+<a href="https://t.me/+jq3VD_u7rccyMzY1" class="btn">
+  JOIN NOW FOR FREE TELEGRAM
+</a>
+
+<div class="timer">
+⏳ Free Access Closing Soon
 </div>
+
+<div class="proof">
+📈 Limited Seats • Active Community
+</div>
+
+<p class="risk">
+⚠ Market investments are subject to risk
+</p>
+
+<!-- CLEAN FOOTER -->
+<div class="footer">
+Powered by 
+<a href="https://t.me/+rueXSRWaGdE4YmY1" target="_blank">
+Ad Craft Agency
+</a>
+</div>
+</div>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1123868600097424');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1123868600097424&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</body>
+</html>
